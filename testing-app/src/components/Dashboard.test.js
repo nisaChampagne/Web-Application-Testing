@@ -10,22 +10,16 @@ import '@testing-library/react/cleanup-after-each';
 
 
 describe('<Dashboard />', () => {
-    it("displays strikes", () => {
+    it("displays strike", () => {
       const { getByText }  = render(<Dashboard />);
-      const strikes = getByText(/strike/i);
-  
-      fireEvent.click(strikes);
-  
-      expect(strikes);
+      const strike = getByText(/strike/i);  
+      expect(strike);
     })
   
-    it("displays balls", () => {
+    it("displays ball", () => {
       const { getByText } = render(<Dashboard />);
-      const balls = getByText(/ball/i);
-  
-      fireEvent.click(balls);
-  
-      expect(balls);
+      const ball = getByText(/ball/i);  
+      expect(ball);
     })
   });
   
