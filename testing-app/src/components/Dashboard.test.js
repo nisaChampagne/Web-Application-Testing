@@ -13,12 +13,15 @@ describe('<Dashboard />', () => {
     it("displays strike", () => {
       const { getByText }  = render(<Dashboard />);
       const strike = getByText(/strike/i);  
+
+      fireEvent.click('strike')
       expect(strike);
     })
-  
     it("displays ball", () => {
       const { getByText } = render(<Dashboard />);
       const ball = getByText(/ball/i);  
+
+      fireEvent.click('ball')
       expect(ball);
     })
   });

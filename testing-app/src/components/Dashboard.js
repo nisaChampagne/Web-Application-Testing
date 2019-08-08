@@ -34,12 +34,27 @@ export default function Dashboard (){
         }
     }
 
+    const hitsIncrement = () => {
+       if(hits >= 0){
+           setStrikes(0);
+           setBalls(0);
+           setHits(hits + 1)
+       }else {
+           setBalls(strikes);
+           setStrikes(balls);
+           setHits(hits + 1);
+       }
+       console.log('THIS', hits);
+    }
+    // balls and strikes reset to 0 when a player reaches 3 strikes or 4 balls.
+// balls and strikes reset to 0 when a hit is recorded.
+
     return(
         <div className='dashboard'>
             <button onClick={() => ballsIncrement()}>Ball</button>
             <button onClick={() => strikesIncrement()}>Strike</button>
             <button onClick={() => foulsIncrement()}>Foul</button>
-            <button>hit</button>
+            <button onClick={() => hitsIncrement()}>Hit</button>
             <Display balls={balls}
                      setBalls={setBalls}
                      strikes={strikes}

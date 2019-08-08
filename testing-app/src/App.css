@@ -22,7 +22,7 @@
 }
 
 button {
-  background: green;
+  background: rgb(31, 15, 168);
   border-radius: 20%;
   padding: 1rem;
   color: gold;
@@ -33,7 +33,7 @@ button {
 }
 
 .score{
-  background: green;
+  background: rgb(31, 15, 168);
   border-radius: 5px;
   padding: 1rem;
   color: gold;
