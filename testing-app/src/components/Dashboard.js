@@ -36,8 +36,8 @@ export default function Dashboard (){
 
     return(
         <div className='dashboard'>
-            <button onClick={() => strikesIncrement()}>Strike</button>
             <button onClick={() => ballsIncrement()}>Ball</button>
+            <button onClick={() => strikesIncrement()}>Strike</button>
             <button onClick={() => foulsIncrement()}>Foul</button>
             <button>hit</button>
             <Display balls={balls}
